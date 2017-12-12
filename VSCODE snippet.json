@@ -1,0 +1,20 @@
+    {
+           "add current script diro and path functions": {
+               "prefix": "cspd",
+               "body": [
+                   "import inspect",
+                   "import os",
+                   "",
+                   "def currentScriptPath():",
+                   "\treturn os.path.abspath(inspect.getsourcefile(lambda:0))",
+                   "",
+                   "def currentScriptDiro():",
+                   "\treturn os.path.dirname(currentScriptPath())",
+                   "",
+                   "CURRENT_SCRIPT_DIRO = currentScriptDiro()",
+                   "CURRENT_SCRIPT_PATH = currentScriptPath()"
+               ],
+               "description": "add current script diro and path functions (cspd)"
+           }
+    }
+ 
